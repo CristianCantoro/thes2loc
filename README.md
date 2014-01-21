@@ -14,9 +14,14 @@ from the Biblioteca Nazionale di Firenze (_National Library of Florence_)
 and the Library of Congress Subject Headings.
 
 
-USAGE:
+Usage
 ------
+USAGE:
+
 `make all`
+
+produces (among others) the file `thes2lcsh.map` which is what you are
+interested in.
 
 This command comprises three other commands:
 
@@ -40,3 +45,9 @@ following mapping:
 
 Inspired by [this Gist](https://gist.github.com/atomotic/7229203)
 by @atomotic.
+
+License
+-------
+
+This software is released under the MIT license. It is free software.
+(c) 2014 by Cristian Consonni
