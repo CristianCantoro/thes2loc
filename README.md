@@ -1,10 +1,21 @@
 thes2loc
 ========
 
-Italian Thesaurus to Library of Congress Headings
+Italian Thesaurus to Library of Congress Subject Headings via Wikidata
+
+Why
+---
+
+`thes2loc` helps librarian building a multilingual 
+[Thesarus](http://en.wikipedia.org/wiki/Thesaurus) in particular it finds
+a mapping between the Italian 
+[Tesauro del Nuovo Soggettario](http://thes.bncf.firenze.sbn.it)
+from the Biblioteca Nazionale di Firenze (_National Library of Florence_)
+and the Library of Congress Subject Headings.
+
 
 USAGE:
-
+------
 `make all`
 
 This command comprises three other commands:
@@ -22,7 +33,8 @@ To retrieve the corresponding URLs from the file `thes2lcsh.map` use the
 following mapping:
 
 * column in  `thes2lcsh.map` are  `(thes_id, relation, lcsh_id, wikidata_id)`
-* for BNCF Thesaurus: `http://thes.bncf.firenze.sbn.it/termine.php?id={thes_id}`
+* for BNCF Thesaurus: 
+  `http://thes.bncf.firenze.sbn.it/termine.php?id={thes_id}`
 * for LCSH: `http://id.loc.gov/authorities/subjects/{lhcs_id}.html`
 * for Wikidata: `http://www.wikidata.org/wiki/Q{wikidata_id}`
 
