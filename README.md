@@ -15,3 +15,5 @@ To retrieve the corresponding URLs:
 * BNCF Thesaurus: http://thes.bncf.firenze.sbn.it/termine.php?id={thes_id}
 * LCSH: http://id.loc.gov/authorities/subjects/{lhcs_id}.html
 * Wikidata: http://www.wikidata.org/wiki/Q{wikidata_id}
+
+Based on (this Gist)[https://gist.github.com/atomotic/7229203] by @atomotic.
