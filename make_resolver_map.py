@@ -30,7 +30,7 @@ try:
     data = item.get()
 except pywikibot.exceptions.NoPage as e:
     print  "Error fetching item Q{}".format(sys.argv[1])
-    exit(-1)
+    exit(0)
 
 thes = item.claims['P508'][0].getTarget()
  
