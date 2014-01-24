@@ -13,6 +13,8 @@ a mapping between the Italian
 from the Biblioteca Nazionale di Firenze (_National Library of Florence_)
 and the Library of Congress Subject Headings.
 
+It uses this mapping by John Ockerbloom:
+[wikimap](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/wikimap)
 
 Usage
 ------
@@ -37,9 +39,20 @@ type, LCHS id, Wikidata item no.)
 To retrieve the corresponding URLs from the file `thes2lcsh.map` use the 
 following mapping:
 
-* column in  `thes2lcsh.map` are  `(thes_id, relation, lcsh_id, wikidata_id)`
-* for BNCF Thesaurus: 
-  `http://thes.bncf.firenze.sbn.it/termine.php?id={thes_id}`
+* column in  `thes2lcsh.map` are 
+
+`(thes_id, relation, lcsh_id, wikidata_id)`
+
+where:
+1) `thes_id` is the BNCF Thesaurus term identifier;
+2) `relation` is the relation type 
+(as defined by John Ockerbloom's classification, see the [documentation](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/docs);
+3) `lcsh_id` is the Library of Congress Subject Heading identifier;
+4) `wikidata_id` is the Wikidata item no. (e. g. `42` for `Q42`);
+
+To retrieve the corresponding URLs from `thes2lcsh.map` use the following
+mapping:
+* for BNCF Thesaurus: `http://thes.bncf.firenze.sbn.it/termine.php?id={thes_id}`
 * for LCSH: `http://id.loc.gov/authorities/subjects/{lhcs_id}.html`
 * for Wikidata: `http://www.wikidata.org/wiki/Q{wikidata_id}`
 
