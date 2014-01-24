@@ -14,10 +14,10 @@ from the Biblioteca Nazionale di Firenze (_National Library of Florence_)
 and the Library of Congress Subject Headings (LCSH).
 
 The BNCF Thesaurus links Wikipedia article in some of it s terms, see
-for example: [Abbazia](http://thes.bncf.firenze.sbn.it/termine.php?id=17357)
+for example: [Abbazie](http://thes.bncf.firenze.sbn.it/termine.php?id=17357)
 (Abbeys) which links to the Italian Wikipedia article
-[Abbazia](https://it.wikipedia.org/wiki/Abbazia). On May 2013 the Italian
-Wikipedia community created a template
+[Abbazia](https://it.wikipedia.org/wiki/Abbazia) (Abbey). On May 2013 the
+Italian Wikipedia community created a template
 {{[BNCF Thesaurus](https://it.wikipedia.org/wiki/Template:BNCF_Thesaurus)}}
 to link back this terms and inserted the data also in Wikidata, creating the 
 property: [P:508](https://www.wikidata.org/wiki/Property:P508), i.e. 
