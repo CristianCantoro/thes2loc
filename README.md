@@ -1,7 +1,7 @@
 thes2loc
 ========
 
-Italian Thesaurus to Library of Congress Subject Headings via Wikidata
+Italian Thesaurus terms to Library of Congress Subject Headings via Wikidata.
 
 Why
 ---
@@ -9,12 +9,26 @@ Why
 `thes2loc` helps librarian building a multilingual 
 [Thesarus](http://en.wikipedia.org/wiki/Thesaurus) in particular it finds
 a mapping between the Italian 
-[Tesauro del Nuovo Soggettario](http://thes.bncf.firenze.sbn.it)
+[Tesauro del Nuovo Soggettario](http://thes.bncf.firenze.sbn.it) (THES)
 from the Biblioteca Nazionale di Firenze (_National Library of Florence_)
-and the Library of Congress Subject Headings.
+and the Library of Congress Subject Headings (LCSH).
 
-It uses this mapping by John Ockerbloom:
-[wikimap](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/wikimap)
+The BNCF Thesaurus links Wikipedia article in some of it s terms, see
+for example: [Abbazia](http://thes.bncf.firenze.sbn.it/termine.php?id=17357)
+(Abbeys) which links to the Italian Wikipedia article
+[Abbazia](https://it.wikipedia.org/wiki/Abbazia). On May 2013 the Italian
+Wikipedia community created a template
+{{[BNCF Thesaurus](https://it.wikipedia.org/wiki/Template:BNCF_Thesaurus)}}
+to link back this terms and inserted the data also in Wikidata, creating the 
+property: [P:508](https://www.wikidata.org/wiki/Property:P508), i.e. 
+BNCF Thesaurus
+
+For the mapping between the Library of Congress Subject Headings and English
+Wikipedia articles it uses this mapping by John Ockerbloom:
+[wikimap](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/wikimap).
+
+Thus a map THES <-> LCSH is built in this way:
+`THES <-> itwiki <-> wikidata <-> enwiki <-> LCSH`
 
 Usage
 ------
