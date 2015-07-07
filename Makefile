@@ -14,7 +14,9 @@ match:
 	parallel --no-notice -j$(NCORES) ./thes2lcsh.py {} :::: wikimap.txt 
 
 distinct:
-	cat thes2lcsh.map | sort | uniq > thes2lcsh.map
+	cp thes2lcsh.map _thes2lcsh.map
+	cat _thes2lcsh.map | sort | uniq > thes2lcsh.map
+	rm _thes2lcsh.map
 
 all: | get resolve match distinct
 
