@@ -12,8 +12,11 @@ resolve:
 match:
 	./produce_enwiki_titles.py
 	parallel --no-notice -j$(NCORES) ./thes2lcsh.py {} :::: wikimap.txt 
-	
-all: | get resolve match
+
+distinct:
+	cat thes2lcsh.map | sort | uniq > thes2lcsh.map
+
+all: | get resolve match distinct
 
 clean:
 	rm ids.txt wikimap.txt
