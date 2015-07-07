@@ -20,7 +20,7 @@ for example: [Abbazie](http://thes.bncf.firenze.sbn.it/termine.php?id=17357)
 Italian Wikipedia community created a template
 {{[BNCF Thesaurus](https://it.wikipedia.org/wiki/Template:BNCF_Thesaurus)}}
 to link back this terms and inserted the data also in Wikidata, creating the 
-property: [P:508](https://www.wikidata.org/wiki/Property:P508), i.e. 
+property: [P:508](https://www.wikidata.org/wiki/Property:P508), i.e.
 BNCF Thesaurus
 
 For the mapping between the Library of Congress Subject Headings and English
@@ -30,6 +30,22 @@ Wikipedia articles it uses this mapping by John Ockerbloom:
 Thus a map THES <-> LCSH is built in this way:
 
 `THES <-> itwiki <-> wikidata <-> enwiki <-> LCSH`
+
+Requirements
+------------
+
+`thes2loc` has only been tested on Ubuntu Linux so far. it should work also on
+other *nix systems.
+To run it you need the following software as prerequisites:
+* [`curl`](http://curl.haxx.se/), this comes pre-packaged with most desktop
+  Linux distributions.
+* [`jq`](https://stedolan.github.io/jq/), a powerful CLI tool for processing
+  JSON. You can download it from the project's website.
+* GNU  [`parallel`](https://www.gnu.org/software/parallel/), a shell tool for
+  executing jobs in parallel. GNU parallel is packaged on several Linux
+  distributions.
+* [`pywikibot`](https://tools.wmflabs.org/pywikibot/), a python framework to
+  interact with MediaWiki wikis and in particular with the Wikimedia projects.
 
 Usage
 ------
@@ -64,7 +80,8 @@ where:
 1. `thes_id` is the BNCF Thesaurus term identifier;
 
 2. `relation` is the relation type 
-(as defined by John Ockerbloom's classification, see the [documentation](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/docs);
+(as defined by John Ockerbloom's classification, see the
+[documentation](https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/docs);
 
 3. `lcsh_id` is the Library of Congress Subject Heading identifier;
 
@@ -82,7 +99,7 @@ mapping:
 
 
 Inspired by [this Gist](https://gist.github.com/atomotic/7229203)
-by @atomotic.
+by [@atomotic](https://github.com/atomotic).
 
 License
 -------

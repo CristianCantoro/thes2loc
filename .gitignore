@@ -1,3 +1,7 @@
+# pywikibot folder
+core
+
+# python files
 *.py[cod]
 
 # C extensions
